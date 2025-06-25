@@ -1,0 +1,261 @@
+.booking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.booking-modal-content {
+  background: var(--white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 768px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.booking-modal-header {
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.booking-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.booking-modal-body {
+  padding: 0 24px 24px 24px;
+}
+
+.booking-yacht-info {
+  background-color: var(--gray-50);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.booking-yacht-info-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.booking-yacht-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.booking-yacht-details {
+  flex: 1;
+}
+
+.booking-yacht-name {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.booking-yacht-location {
+  color: var(--gray-600);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.booking-yacht-price {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.booking-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.booking-form-label-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.booking-form-input,
+.booking-form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.booking-form-input:focus,
+.booking-form-select:focus {
+  border-color: var(--primary);
+}
+
+.booking-form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.booking-form-textarea:focus {
+  border-color: var(--primary);
+}
+
+.booking-summary {
+  background-color: rgba(47, 74, 113, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.booking-summary-title {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.booking-summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.booking-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-summary-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-summary-label-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.booking-summary-value {
+  font-weight: 500;
+}
+
+.booking-summary-total {
+  border-top: 1px solid rgba(47, 74, 113, 0.2);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.booking-summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.booking-modal-footer {
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.booking-cancel-button {
+  border: 1px solid var(--gray-300);
+  color: var(--gray-700);
+  background: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.booking-cancel-button:hover {
+  background-color: var(--gray-50);
+}
+
+.booking-confirm-button {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.booking-confirm-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.booking-confirm-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .booking-form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .booking-modal-content {
+    margin: 0;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+
+  .booking-modal-header,
+  .booking-modal-body,
+  .booking-modal-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

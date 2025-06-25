@@ -1,0 +1,393 @@
+.reservations-page {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+.reservations-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .reservations-container {
+    padding: var(--space-12) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .reservations-container {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+/* Page Header */
+.reservations-header {
+  margin-bottom: var(--space-8);
+}
+
+.reservations-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .reservations-title {
+    font-size: 2.25rem;
+  }
+}
+
+.reservations-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+}
+
+/* Filter Tabs */
+.reservations-filters {
+  margin-bottom: var(--space-8);
+}
+
+.filter-tabs {
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  gap: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: 1px;
+}
+
+.filter-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  color: var(--gray-700);
+  border-bottom-color: var(--gray-300);
+}
+
+.filter-tab--active {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-tab__count {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  padding: 0.125rem var(--space-2);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.filter-tab--active .filter-tab__count {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* No Reservations */
+.no-reservations {
+  text-align: center;
+  padding: var(--space-12) 0;
+}
+
+.no-reservations__icon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--gray-400);
+  margin: 0 auto var(--space-4);
+}
+
+.no-reservations__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: var(--space-2);
+}
+
+.no-reservations__subtitle {
+  color: var(--gray-500);
+  margin-bottom: var(--space-6);
+}
+
+/* Reservations List */
+.reservations-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.reservation-card {
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reservation-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.reservation-card__content {
+  padding: var(--space-6);
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .reservation-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.reservation-yacht {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.reservation-yacht__image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.reservation-yacht__details {
+  flex: 1;
+}
+
+.reservation-yacht__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.reservation-yacht__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.status-badge {
+  padding: var(--space-1) var(--space-3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-confirmed {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.status-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.status-cancelled {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.status-completed {
+  background-color: rgba(47, 74, 113, 0.1);
+  color: var(--primary);
+}
+
+.reservation-yacht__location,
+.reservation-yacht__guests {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-1);
+}
+
+.reservation-summary {
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .reservation-summary {
+    text-align: right;
+  }
+}
+
+.reservation-price__amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.reservation-dates {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: var(--space-4);
+}
+
+.reservation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .reservation-actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reservation-actions {
+    flex-direction: column;
+  }
+}
+
+.reservation-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--gray-200);
+}
+
+.reservation-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+@media (min-width: 640px) {
+  .reservation-meta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-top: var(--space-12);
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-8);
+}
+
+.quick-actions__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-6);
+}
+
+.quick-actions__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .quick-actions__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quick-action {
+  text-align: center;
+}
+
+.quick-action__icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  color: var(--white);
+}
+
+.quick-action__icon--primary {
+  background-color: var(--primary);
+}
+
+.quick-action__icon--secondary {
+  background-color: var(--primary);
+}
+
+.quick-action__icon--accent {
+  background-color: var(--success);
+}
+
+.quick-action__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.quick-action__description {
+  color: var(--gray-600);
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+}
+
+/* Button variants */
+.btn-danger {
+  background-color: var(--error);
+  color: var(--white);
+  border: none;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .reservation-yacht {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reservation-yacht__header {
+    justify-content: center;
+  }
+
+  .reservation-summary {
+    text-align: center;
+  }
+
+  .reservation-actions .btn {
+    flex: 1;
+  }
+}

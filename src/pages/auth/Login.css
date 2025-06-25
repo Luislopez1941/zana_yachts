@@ -1,0 +1,224 @@
+.login-page {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .login-container {
+    padding: var(--space-12) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+.login-card {
+  max-width: 28rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-logo {
+  margin-bottom: var(--space-4);
+}
+
+.login-logo-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.login-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.login-subtitle {
+  color: var(--gray-600);
+}
+
+.login-form {
+  margin-top: var(--space-8);
+}
+
+.login-form-content {
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+.checkbox-label {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  cursor: pointer;
+}
+
+.forgot-password-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.forgot-password-link:hover {
+  color: var(--primary-dark);
+}
+
+.form-toggle {
+  text-align: center;
+}
+
+.form-toggle-text {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.form-toggle-button {
+  margin-left: var(--space-1);
+  font-weight: 500;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-toggle-button:hover {
+  color: var(--primary-dark);
+}
+
+.social-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.social-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--gray-300);
+}
+
+.social-divider-text {
+  padding: 0 var(--space-2);
+  background-color: var(--white);
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.social-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  background-color: var(--white);
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-button:hover {
+  background-color: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.login-footer-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-footer-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .login-options {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+}

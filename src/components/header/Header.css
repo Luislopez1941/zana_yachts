@@ -1,0 +1,238 @@
+/* Header Styles */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2f4a71;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #4a6b92;
+}
+
+.logo-text {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Navigation Styles */
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: #6b7280;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nav-link:hover {
+  color: #2f4a71;
+}
+
+.nav-link.active {
+  color: #2f4a71;
+  border-bottom: 2px solid #2f4a71;
+}
+
+/* Button Container */
+.buttons-container {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Login Button Styles */
+.login-btn-login {
+  background: #2f4a71;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(47, 74, 113, 0.3);
+}
+
+.login-btn-login:hover {
+  background: #1e3146;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(47, 74, 113, 0.4);
+}
+
+.login-btn-reservations {
+  background: transparent;
+  border: 2px solid #2f4a71;
+  color: #2f4a71;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.login-btn-reservations:hover {
+  background: #2f4a71;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(47, 74, 113, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #2f4a71;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  padding: 1rem;
+}
+
+.mobile-nav-item {
+  display: block;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+  color: #6b7280;
+}
+
+.mobile-nav-item:hover {
+  color: #2f4a71;
+  background-color: #f9fafb;
+}
+
+.mobile-nav-item.active {
+  color: #2f4a71;
+  background-color: rgba(47, 74, 113, 0.05);
+}
+
+.mobile-buttons-container {
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-login-btn {
+  background: #2f4a71;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(47, 74, 113, 0.3);
+}
+
+.mobile-login-btn:hover {
+  background: #1e3146;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(47, 74, 113, 0.4);
+}
+
+.mobile-reservations-btn {
+  background: transparent;
+  border: 2px solid #2f4a71;
+  color: #2f4a71;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-reservations-btn:hover {
+  background: #2f4a71;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(47, 74, 113, 0.3);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .buttons-container {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .header-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 0 2rem;
+  }
+}

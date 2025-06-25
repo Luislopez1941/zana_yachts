@@ -1,0 +1,139 @@
+.yacht-grid-section {
+  padding: 64px 0;
+  background-color: var(--white);
+}
+
+.yacht-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.yacht-grid-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  gap: 16px;
+}
+
+.yacht-grid-header-content {
+  text-align: center;
+}
+
+.yacht-grid-title {
+  font-size: clamp(1.875rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.yacht-grid-subtitle {
+  font-size: 18px;
+  color: var(--gray-600);
+}
+
+.yacht-grid-clear-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.yacht-grid-clear-button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.yacht-grid-clear-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.yacht-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.yacht-grid-no-results {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.yacht-grid-no-results-icon-container {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  border-radius: 50%;
+}
+
+.yacht-grid-no-results-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--gray-400);
+}
+
+.yacht-grid-no-results-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.yacht-grid-no-results-subtitle {
+  color: var(--gray-500);
+  margin-bottom: 24px;
+  max-width: 448px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yacht-grid-show-all-button {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.yacht-grid-show-all-button:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (min-width: 768px) {
+  .yacht-grid-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .yacht-grid-header-content {
+    text-align: left;
+  }
+
+  .yacht-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .yacht-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

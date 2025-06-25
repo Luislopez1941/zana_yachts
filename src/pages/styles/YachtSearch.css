@@ -1,0 +1,348 @@
+/* YachtSearch page styles */
+
+.yacht-search-page {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+/* Header styles */
+.yacht-search-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 16px 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yacht-search-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.yacht-search-back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.yacht-search-back-button:hover {
+  background-color: var(--gray-100);
+  transform: translateX(-2px);
+}
+
+.yacht-search-back-button svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.yacht-search-back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+.yacht-search-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Breadcrumb navigation */
+.yacht-search-breadcrumb {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 12px 0;
+}
+
+.yacht-search-breadcrumb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.yacht-search-breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.yacht-search-breadcrumb-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.yacht-search-breadcrumb-link:hover {
+  color: var(--primary-dark);
+}
+
+.yacht-search-breadcrumb-separator {
+  color: var(--gray-400);
+}
+
+/* Search summary section */
+.yacht-search-summary {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 20px 0;
+}
+
+.yacht-search-summary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.yacht-search-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.yacht-search-summary-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.yacht-search-summary-count {
+  color: var(--gray-600);
+  font-size: 16px;
+}
+
+/* Action buttons in header */
+.yacht-search-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.yacht-search-modify-button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.yacht-search-modify-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.yacht-search-clear-button {
+  background: none;
+  color: var(--gray-600);
+  border: 1px solid var(--gray-300);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.yacht-search-clear-button:hover {
+  background-color: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+/* Loading state */
+.yacht-search-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.yacht-search-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gray-200);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: yacht-search-spin 1s linear infinite;
+}
+
+@keyframes yacht-search-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty state */
+.yacht-search-empty {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.yacht-search-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px auto;
+  color: var(--gray-400);
+}
+
+.yacht-search-empty-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.yacht-search-empty-description {
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yacht-search-empty-button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.yacht-search-empty-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Filter chips */
+.yacht-search-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.yacht-search-filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.yacht-search-filter-chip-remove {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.yacht-search-filter-chip-remove:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .yacht-search-summary-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .yacht-search-header-container {
+    gap: 24px;
+  }
+
+  .yacht-search-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .yacht-search-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .yacht-search-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .yacht-search-modify-button,
+  .yacht-search-clear-button {
+    flex: 1;
+  }
+
+  .yacht-search-back-button {
+    align-self: flex-start;
+  }
+}
+
+/* Sticky header on scroll */
+.yacht-search-header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for page entrance */
+.yacht-search-page {
+  animation: yacht-search-fade-in 0.3s ease-out;
+}
+
+@keyframes yacht-search-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Results section styling */
+.yacht-search-results {
+  padding-top: 0;
+}
+
+/* Override grid section padding for search page */
+.yacht-search-page .yacht-grid-section {
+  padding-top: 32px;
+}
